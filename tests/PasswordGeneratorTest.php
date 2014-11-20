@@ -2,8 +2,8 @@
 /**
  * Created by JetBrains PhpStorm.
  * User: Alexandre
- * Date: 19/11/14
- * Time: 17:49
+ * Date: 18/11/14
+ * Time: 11:58
  * To change this template use File | Settings | File Templates.
  */
 
@@ -13,50 +13,59 @@ use Web1\StringGenerator\PasswordGenerator;
 
 /**
  * Class PasswordGeneratorTest
+ *
  * @package Tests\Web1\StringGenerator
  */
-class PasswordGeneratorTest extends  \PHPUnit_Framework_TestCase
+class PasswordGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test If ...
+     * Test if ...
+     *
+     * @throws \Exception
      */
-    public function testGenerateRandomStringLengthEasy()
+    public function testGetRandomStringLengthEasy()
     {
-        $length = mt_rand(1,10000);
-        $password = PasswordGenerator::generateRandomString($length,PasswordGenerator::PASSWORD_EASY);
+        $length = mt_rand(1, 10000);
+        $password = PasswordGenerator::getRandomString($length, PasswordGenerator::PASSWORD_EASY);
 
-        $this->assertEquals($length,mb_strlen($password));
+        $this->assertEquals($length, mb_strlen($password));
     }
 
     /**
-     *Test If ...
+     * Test if ...
+     *
+     * @throws \Exception
      */
-    public function testGenerateRandomStringLengthMedium()
+    public function testGetRandomStringLengthMedium()
     {
-        $length = mt_rand(1,10000);
-        $password = PasswordGenerator::generateRandomString($length,PasswordGenerator::PASSWORD_MEDIUM);
+        $length = mt_rand(1, 10000);
+        $password = PasswordGenerator::getRandomString($length, PasswordGenerator::PASSWORD_MEDIUM);
 
-        $this->assertEquals($length,mb_strlen($password));
+        $this->assertEquals($length, mb_strlen($password));
     }
 
     /**
-     *Test If ...
+     * Test if ...
+     *
+     * @throws \Exception
      */
-    public function testGenerateRandomStringLengthHard()
+    public function testGetRandomStringLengthHard()
     {
-        $length = mt_rand(1,10000);
-        $password = PasswordGenerator::generateRandomString($length,PasswordGenerator::PASSWORD_HARD);
+        $length = mt_rand(1, 10000);
+        $password = PasswordGenerator::getRandomString($length, PasswordGenerator::PASSWORD_HARD);
 
-        $this->assertEquals($length,mb_strlen($password));
+        $this->assertEquals($length, mb_strlen($password));
     }
 
     /**
-     *Test If ...
+     * Test if ...
+     *
+     * @throws \Exception
      */
-    public function testGenerateRandomStringNotEmpty()
+    public function testGetRandomStringNotEmpty()
     {
-        $password = PasswordGenerator::generateRandomString(0);
+        $password = PasswordGenerator::getRandomString(0);
 
         $this->assertNotEmpty($password);
     }
-}
+} 

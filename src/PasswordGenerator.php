@@ -45,7 +45,7 @@ class PasswordGenerator
      *
      * @throws \Exception
      */
-    public static function generateRandomString($nb = null, $strength = self::PASSWORD_MEDIUM)
+    public static function getRandomString($nb = null, $strength = self::PASSWORD_MEDIUM)
     {
         if(!in_array($strength, [
             self::PASSWORD_EASY,
