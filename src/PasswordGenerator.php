@@ -22,7 +22,7 @@ class PasswordGenerator
     /**
      * @var string
      */
-    private static  $passwordDefaultEasy   = 'abcdefghijklmnopqrstuvwxyz';
+    private static  $passwordDefaultEasy = 'abcdefghijklmnopqrstuvwxyz';
     /**
      * @var string
      */
@@ -30,7 +30,7 @@ class PasswordGenerator
     /**
      * @var string
      */
-    private static  $passwordDefaultHard   = 'èé#à@ç!?:/&';
+    private static  $passwordDefaultHard = 'èé#à@ç!?:/&';
     /**
      * @var int
      */
