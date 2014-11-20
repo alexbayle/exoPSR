@@ -60,7 +60,7 @@ class PasswordGenerator
                 ? self::$passwordDefaultLength
                 : (int)$nb;
 
-        $password = "";
+        $password = '';
 
         switch($strength){
             case self::PASSWORD_EASY:
@@ -74,7 +74,7 @@ class PasswordGenerator
                 break;
         }
 
-        for ($i = 0; $i < $nb; $i++) {
+        for ($i = 0; $i < $length; $i++) {
             $password .= mb_substr($chaine, mt_rand(0, (mb_strlen($chaine)-1)), 1);
         }
 
