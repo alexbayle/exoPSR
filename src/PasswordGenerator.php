@@ -64,18 +64,18 @@ class PasswordGenerator
 
         switch($strength){
             case self::PASSWORD_EASY:
-                $alphabet = self::$passwordDefaultEasy;
+                $chaine = self::$passwordDefaultEasy;
                 break;
             case self::PASSWORD_MEDIUM:
-                $alphabet = self::$passwordDefaultEasy.self::$passwordDefaultMedium;
+                $chaine = self::$passwordDefaultEasy.self::$passwordDefaultMedium;
                 break;
             case self::PASSWORD_HARD:
-                $alphabet = self::$passwordDefaultEasy.self::$passwordDefaultMedium.self::$passwordDefaultHard;
+                $chaine = self::$passwordDefaultEasy.self::$passwordDefaultMedium.self::$passwordDefaultHard;
                 break;
         }
 
         for ($i = 0; $i < $nb; $i++) {
-            $password .= mb_substr($alphabet, mt_rand(0, (mb_strlen($alphabet)-1)), 1);
+            $password .= mb_substr($chaine, mt_rand(0, (mb_strlen($chaine)-1)), 1);
         }
 
         return $password;
