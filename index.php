@@ -8,7 +8,7 @@
  */
 
 require __DIR__.'/vendor/autoload.php';
-,,,
+
 /*$title ='Mé zarzafazfa fkzefezkfez ihugzyfdu jionubiyvut';
 
 $slugify = new \Cocur\Slugify\Slugify();
