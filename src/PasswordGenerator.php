@@ -46,7 +46,7 @@ class PasswordGenerator
      * @throws \Exception
      */
     public static function getRandomString($nb = null, $strength = self::PASSWORD_MEDIUM) {
-        if(!in_array($strength,
+        if(false === in_array($strength,
         [
             self::PASSWORD_EASY,
             self::PASSWORD_MEDIUM,
@@ -54,12 +54,7 @@ class PasswordGenerator
         ]))
             throw new \Exception('Bad strength');
 
-        $length = (is_null($nb))
-            ? self::$passwordDefaultLength
-            : (0 === (int) $nb)
-                ? self::$passwordDefaultLength
-                : (int) $nb;
-
+        $length   = (null === $nb) ? self::$passwordDefaultLength : (0 === (int) $nb) ? self::$passwordDefaultLength :(int) $nb;
         $password = $chaine = '';
 
         switch($strength){
@@ -75,7 +70,7 @@ class PasswordGenerator
         }
 
         for ($i = 0; $i < $length; $i++) {
-            $password .= mb_substr($chaine, mt_rand(0, (mb_strlen($chaine)- 1)), 1);
+            $password .= mb_substr($chaine, mt_rand(0, (mb_strlen($chaine) - 1)), 1);
         }
 
         return $password;
