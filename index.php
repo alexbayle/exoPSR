@@ -11,6 +11,6 @@ require __DIR__.'/vendor/autoload.php';
 
 $passwordGenerator = new \Web1\StringGenerator\PasswordGenerator();
 
-echo $passwordGenerator->GenerateRandomString(25,\Web1\StringGenerator\PasswordGenerator::PASSWORD_HARD);
+echo $passwordGenerator->getRandomString(25,\Web1\StringGenerator\PasswordGenerator::PASSWORD_HARD);
 
 
