@@ -9,13 +9,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-/*$title ='Mé zarzafazfa fkzefezkfez ihugzyfdu jionubiyvut';
-
-$slugify = new \Cocur\Slugify\Slugify();
-echo $slugify->slugify($title);*/
-
 $passwordGenerator = new \Web1\StringGenerator\PasswordGenerator();
 
 echo $passwordGenerator->GenerateRandomString(25,\Web1\StringGenerator\PasswordGenerator::PASSWORD_HARD);
 
-//$passwordGeneratorTest = new Tests\Web1\StringGenerator\PasswordGeneratorTest();
+
