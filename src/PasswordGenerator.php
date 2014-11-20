@@ -60,7 +60,7 @@ class PasswordGenerator
                 ? self::$passwordDefaultLength
                 : (int)$nb;
 
-        $password = '';
+        $password = $chaine = '';
 
         switch($strength){
             case self::PASSWORD_EASY:
