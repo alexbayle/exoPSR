@@ -2,6 +2,10 @@
 [![Build Status](https://travis-ci.org/alexbayle/exoPSR.svg?branch=master)]
 (https://travis-ci.org/alexbayle/exoPSR/builds)
 
+[![Code Coverage](https://scrutinizer-ci.com/g/alexbayle/exoPSR/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/alexbayle/exoPSR/?branch=master)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexbayle/exoPSR//badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexbayle/exoPSR/?branch=master)
+
 String Generator is a program that allow you to create a random password with three different levels:
 -Easy
 -Medium
